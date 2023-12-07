@@ -1,0 +1,714 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+html, body {
+  background-color: black;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+button {
+  border: none;
+  padding: 0;
+  outline: none;
+  user-select: none;
+}
+
+span {
+  box-sizing: border-box;
+}
+
+.iphone, .screen {
+  border: 0.5vh solid white;
+}
+
+.iphone {
+  padding: 10vh 1.5vh;
+  border-radius: 6vh;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  background-color: black;
+  /* z-index: 2; */
+}
+
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5vh;
+  width: 36vh;
+  height: 55vh;
+  background-color: white;
+  border-radius: 15px;
+  /* margin-top: 20px; */
+      overflow-y: auto;
+      white-space: nowrap;
+  /* z-index: 1; */
+}
+@keyframes scrollAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-47%);
+  }
+}
+
+#insta_screen {
+  background-color: white;
+  background-image: url('instapost.png');
+  background-size: cover;
+  height: 120vh;
+  border-radius: 15px;
+  transform: translate(-1.5px, -15px) scaleX(1.1);
+  overflow: hidden;
+  animation: scrollAnimation 20s linear 1; 
+}
+@keyframes scrollAnimation2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-54%);
+  }
+}
+#twitter_screen {
+  background-image: url('twitterpost.png');
+  background-size: cover;
+  height: 235%;
+  width: 110%;
+  border-radius: 10px;
+  transform: translate(-1.5px, -15px) scaleX(1.12);
+  overflow: hidden;
+  animation: scrollAnimation2 30s linear 1; 
+}
+
+#safari_screen {
+  background-image: url('googletwo.png');
+  background-size: cover;
+  height: 200%;
+  width: 110%;
+  border-radius: 10px;
+  transform: translate(1px, -15px) scaleX(1.12);
+  overflow: hidden;  
+  animation: scrollAnimation2 25s linear 1;
+}
+
+#shut_screen {
+  font-family: "Anonymous Pro", monospace;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: red;
+  font-size: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 999; 
+}
+
+#shut_screen .app-screen-text {
+  animation: fadeOut 10s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.icon {
+  width: 6vh;
+  height: 6vh;
+  border-radius: 1.5vh;
+  margin: 1vh;
+  background-color: white;
+}
+
+.icon:active {
+  opacity: 0.75;
+}
+
+.icon:nth-last-of-type(-n+4) {
+  margin-top: 3vh;
+}
+
+
+.home, .camera, .proximity, .speaker, .silence, .volume-up, .volume-down, .sleep {
+  position: absolute;
+}
+
+.home, .camera, .proximity {
+  border-radius: 50%;
+}
+
+.speaker, .silence, .volume-up, .volume-down, .sleep, .proximity {
+  background-color: #525c6b;
+}
+
+.home, .speaker, .camera, .proximity {
+  left: 50%;
+}
+
+.home, .speaker {
+  margin-left: -3vh;
+  width: 6vh;
+}
+
+.home, .camera {
+  border: 0.5vh solid #525c6b;
+}
+
+.home {
+  height: 6vh;
+  bottom: 2vh;
+}
+
+.speaker {
+  top: 4.75vh;
+  height: 0.5vh;
+  border-radius: 0.5vh;
+}
+
+.camera {
+  width: 1.5vh;
+  height: 1.5vh;
+  top: 4.25vh;
+  margin-left: -6.5vh;
+}
+
+
+.silence, .volume-up, .volume-down, .sleep {
+  width: 0.5vh;
+}
+
+.volume-up, .volume-down, .sleep {
+  height: 5vh;
+}
+
+.silence, .volume-up, .volume-down {
+  left: -0.75vh;
+}
+
+.silence {
+  height: 3vh;
+  top: 10vh;
+}
+
+.volume-up, .sleep {
+  top: 17vh;
+}
+
+.volume-down {
+  top: 24vh;
+}
+
+.sleep {
+  right: -0.75vh;
+}
+
+.insta{
+    background-image: url('insta.png');
+    background-size: cover;
+    width: 6vh;
+    height: 6vh;
+    margin-right: 1.5vh;
+    background-color: white;
+    border-radius: 1.5vh;
+    border: none;
+    margin-left: 1.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  .insta:hover{
+    transform: scale(1.12);
+  }
+.twitter{
+  background-image: url('twitter.png');
+  background-size: cover;
+  margin-right: 2vh;
+  background-color: white;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 1.5vh;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.twitter:hover{
+  transform: scale(1.12);
+}
+
+.messages{
+  background-image: url('messages.png');
+  background-size: cover;
+  background-color: white;
+  width: 6vh;
+  margin-right: 1.5vh;
+  height: 6vh;
+  border-radius: 1.5vh;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+  
+.tiktok{
+  background-image: url('tiktok.png');
+  background-size: cover;
+  background-color: white;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 1.5vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+
+.safari{
+  background-image: url('safari.png');
+  background-size: cover;
+  background-color: white;
+  width: 6vh;
+  height: 6vh;
+  margin-top: -10vh;
+  border-color: white;
+  margin-left: 1.5vh;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+}
+.safari:hover{
+  transform: scale(1.12);
+}
+
+.googlemaps{
+  background-image: url('googlemaps.png');
+  background-size: cover;
+  background-color: white;
+  width: 7vh;
+  margin-top: -10.5vh;
+  height: 7vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.applestore{
+  background-image: url('applestore.png');
+  background-size: cover;
+  background-color: white;
+  width: 5vh;
+  margin-top: -9.3vh;
+  height: 5vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.youtube{
+  background-image: url('youtube.png');
+  background-size: cover;
+  background-color: white;
+  width: 7.4vh;
+  margin-top: -11vh;
+  height: 8.5vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gmail{
+  background-image: url('gmail.png');
+  background-size: cover;
+  background-color: white;
+  margin-top: -14vh;
+  width: 5.5vh;
+  height: 5.5vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.minecraft{
+  background-image: url('minecraft.png');
+  background-size: cover;
+  background-color: white;
+  width: 5.5vh;
+  margin-top: -14vh;
+  height: 5.5vh;
+  border-color: white;
+  margin-right: 3vh;
+  margin-left: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.header{
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 200px;
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app_screen{
+  display: none;
+  flex-wrap: wrap;
+  padding: 1.5vh;
+  width: 36vh;
+  height: 55vh;
+  background-size: cover;
+}
+
+#home_screen{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5vh;
+  width: 36vh;
+}
+
+.effect {
+  position: relative;
+  font-weight: bold;
+  font-family: "Anonymous Pro", monospace;
+  letter-spacing: 7px;
+  overflow: hidden;
+  border-right: 2px solid hsl(0, 0%, 80%);
+  white-space: nowrap;
+  animation: typewriter 4s steps(45) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+}
+
+
+/* typewriter animation :0 */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: hsl(0, 0%, 80%);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+.intro-text {
+  font-family: "Anonymous Pro", monospace;
+  top: 55%;
+  font-size: 24px;
+  position: absolute;
+  left: 20%;
+  margin-right: 50%;
+  transform: translate(-60%, -30%);
+  background-color: rgba(0, 0, 0, 0.02);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  z-index: 999;
+  cursor: pointer;
+}
+.intro-text:hover{
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  position: absolute;
+  left: 22%;
+  margin-right: 50%;
+  transform: translate(-60%, 115%);
+  text-align: center;
+  background-color: transparent;
+  width: 80%;
+  max-width: 18em;
+  padding: 3.12em 5em;
+  border-radius: 0.5em;
+}
+
+.timer-display {
+  font-size: 2em;
+  text-align: center;
+  box-shadow: 0 0 20px #FF0000;
+  padding: 10px 30px;
+  font-family: "Roboto Mono", monospace;
+}
+
+.subtitle{
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  transition: color 0.9 ease-in-out;
+}
+@keyframes blinkAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-text {
+  animation: blinkAnimation 1s infinite; 
+  color:red;
+}
+
+
+/* mobile resizing and positioning */
+@media (max-width: 768px) {
+  .effect {
+    font-size: 20px;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%; 
+    border-right: none; 
+    position: relative;
+    animation: typewriter steps(50) 4s 1 normal both;
+  }
+  .subtitle{
+    font-size: 12px;
+  }
+  
+  .iphone {
+    padding: 6vh 1vh;
+    border-radius: 4vh; 
+    margin-top: 0px;
+  }
+
+  .screen {
+    padding: 0.75vh;
+    width: 25vh; 
+    height: 40vh;
+  }
+
+  .icon {
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.75vh;
+    margin: 0.75vh;
+  }
+
+  .speaker, .proximity, .silence, .volume-up, .volume-down, .sleep {
+    width: 0.4vh;
+    height: 2h;
+  }
+
+  .home {
+    height: 4vh;
+    bottom: 0.75vh;
+    width: 4.5vh;
+    top: 49.5vh;
+  }
+  .home, .camera {
+    border: 0.35vh solid #525c6b;
+  }
+
+  .camera {
+    width: 1vh;
+    height: 1vh;
+    top: 2vh;
+    margin-left: -6vh;
+  }
+
+  .speaker {
+    top: 2.25vh;
+    height: 0.5vh;
+    width: 4.5vh;
+    border-radius: 0.5vh;
+  }
+
+  .silence, .volume-up, .volume-down {
+    left: -0.6vh;
+  }
+  .silence {
+    height: 2vh;
+    top: 7vh;
+  }
+
+  .volume-up, .sleep {
+    top: 13vh;
+    height:4vh;
+  }
+
+  .volume-down {
+    top: 20vh;
+    height:4vh;
+  }
+  .header{
+    margin-top: -200px;
+    margin-bottom: 50px;
+  }
+
+.insta{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+  margin-left: 0vh;
+}
+.insta:hover{
+  transform: scale(1.1);
+}
+.twitter{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+}
+.twitter:hover{
+  transform: scale(1.1);
+}
+.messages{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+}
+.messages:hover{
+  transform: scale(1.1);
+}
+.tiktok{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+}
+.tiktok:hover{
+  transform: scale(1.1);
+}
+.safari{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+  margin-left: 0vh;
+  margin-top: -9vh;
+}
+.safari:hover{
+  transform: scale(1.1);
+}
+
+.googlemaps{
+  width: 5vh;
+  height: 5vh;
+  margin-right: 0.5vh;
+  margin-top: -9vh;
+}
+.applestore{
+  width: 4.5vh;
+  height: 4vh;
+  margin-right: 0.5vh;
+  margin-top: -8.5vh;
+}
+.youtube{
+  width: 5.5vh;
+  height: 7vh;
+  margin-right: 0.5vh;
+  margin-top: -10vh;
+}
+.gmail{
+  background-size: cover;
+  background-color: white;
+  width: 4.3vh;
+  margin-top: -10vh;
+  height: 4.3vh;
+  border-color: white;
+  margin-right: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.minecraft{
+  width: 5vh;
+  margin-top: -10vh;
+  height: 5vh;
+  margin-right: 1.5vh;
+  margin-left: 0vh;
+
+}
+
+.intro-text {
+  margin-right: 60%;
+  font-size: 13px;
+  transform: translate(-80%, -80%);
+}
+
+.wrapper {
+  position: absolute;
+  top: 60%;
+  margin-left: 85%;
+  transform: translate(-80%, -80%);
+  width: 50%;
+  max-width: 4.5em;
+  padding: 10em;
+  border-radius: 0.5em; 
+}
+
+.timer-display {
+  font-size: 1em;
+  text-align: center;
+  padding: 10px 0px;
+  font-family: "Roboto Mono", monospace;
+}
+#insta_screen{
+  height: 100vh;
+  transform: translate(0px, -1px) scaleX(1.05);
+}
+}
+

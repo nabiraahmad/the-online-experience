@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Online Experience</title>
+</head>
+<body>
+    <div class = "header">
+    <header class="effect">THE ONLINE EXPERIENCE</header>
+    </div>
+
+    <div id="introText" class="intro-text">
+        <p>welcome to the online experience.</p>
+    </div>
+    <div class="wrapper">
+        <p class = "subtitle"> tap on the text to continue</p>
+        <div class="timer-display">01:00:00</div>
+    </div>
+
+
+    <div class = "phone-container">
+    <div class="iphone">
+        <div class="screen">
+            <div id="insta_screen" class="app_screen">
+                <div class="app-screen-text"></div> 
+            </div>
+            <div id="twitter_screen" class="app_screen"></div>
+            <div id="safari_screen" class="app_screen">
+            </div>
+            <div id="shut_screen" class="app_screen">
+                <p>phone is shutting down...</p>
+                </div>
+            <div id="home_screen">
+                <button class="insta" onclick="openScreen('insta_screen')"></button>
+                <button class="twitter"onclick="openScreen('twitter_screen')"></button>
+                <button class="messages" ></button>
+                <button class="tiktok"></button>
+                <button class="safari" onclick="openScreen('safari_screen')"></button>
+                <button class="googlemaps"></button>
+                <button class="applestore"></button>
+                <button class="youtube"></button>
+                <button class="minecraft"></button>
+                <button class="gmail"></button>
+                <button class="toonyblast"></button>
+            </div>
+
+          </div>
+      
+        <button onclick="goBack()" class="home" title="Home"></button>
+        <span class="speaker" title="Speaker"></span>
+        <span class="camera" title="Camera"></span>
+        <span class="proximity" title="Proximity Sensor"></span>
+      
+        <button class="silence" title="Silence Switch"></button>
+        <button class="volume-up" title="Volume Up"></button>
+        <button class="volume-down" title="Volume Down"></button>
+        <button class="sleep" title="Sleep"></button>
+      </div>
+      </div>
+     
+      <script src="script.js"></script>
+
+</body>
+</html>
+
